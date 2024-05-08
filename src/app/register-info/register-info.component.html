@@ -1,0 +1,28 @@
+<div class="container " >
+    <div class="row  align-items-center" style="height: 600px;">
+      <div class="col-md-6 offset-md-3 border border-2 rounded rounded-4  p-5 ">
+        <h3 class="text-center ">Create new Account</h3>
+        <form (ngSubmit)="onSubmit()" [formGroup]="registerForm">
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Total Daily Dose of Insuline (TDD)</label>
+                <input type="email" class="form-control" formControlName="TDD"  id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter username">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Insulin Carb Ratio (ICR)</label>
+                <input type="email" class="form-control" formControlName="ICR"  id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Target Blood Sugar Level</label>
+                <input type="text" class="form-control" formControlName="RargetBloodSugerLevel" id="exampleInputPassword1" placeholder="Add Rarget Blood Sugar Level">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Correction Factor</label>
+                <input type="text" class="form-control" formControlName="correctionFactor" id="exampleInputPassword1" placeholder="Correction Factor">
+            </div>
+          <button type="submit" class="btn btn-success ">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+

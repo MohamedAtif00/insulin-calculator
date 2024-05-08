@@ -1,0 +1,31 @@
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow fixed-top">
+    <div class="container">
+      <a class="navbar-brand" [routerLink]="['']">Insulin Calculator</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ms-auto gap-4 ">
+          <li class="nav-item active">
+            <a class="nav-link" [routerLink]="['']">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['calc']" *ngIf="authServ.user">calc</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['calc-table']" *ngIf="authServ.user">Scales</a>
+          </li>
+          <li class="nav-item bg-dark-subtle   rounded  rounded-5 px-3 " style="cursor: pointer;" *ngIf="!authServ.user">
+            <a class="nav-link "  [routerLink]="['login']" >Login </a>
+          </li>
+          <li class="nav-item bg-dark rounded  rounded-5 px-3 " style="cursor: pointer;" *ngIf="!authServ.user">
+            <a class="nav-link text-white " [routerLink]="['register']">Regsiter</a>
+          </li>
+          <li class="nav-item bg-dark-subtle   rounded  rounded-5 px-3 " style="cursor: pointer;" *ngIf="authServ.user">
+            <a class="nav-link " (click)="signOut()"  [routerLink]="['']" >Sign out </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
